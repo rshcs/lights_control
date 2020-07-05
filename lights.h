@@ -25,8 +25,9 @@ class LightsClass
 {
  private:
 	 uint32_t disp_time = 0;
+	 uint32_t disp_time_mux = 0;
 	 int8_t current_state = 1;
-
+	 int8_t current_mux_state = 1;
  public:
 	 LightsClass(uint8_t init_val);
 
@@ -36,7 +37,8 @@ class LightsClass
 	 void portl_config(uint8_t val1, uint8_t val2, uint8_t val3);
 	
 	 void state_config();
-	 void time_config();
+	 void time_config(uint32_t dis_delay);
+	 void mux_time_config(uint32_t dis_delay = 3);
 };
 
 #endif
