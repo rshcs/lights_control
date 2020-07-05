@@ -12,7 +12,7 @@
 #define B_POINT 2
 #define C_POINT 4
 
-#define MUX_DELAY 3
+#define MUX_DELAY 3000
 #define DISP_DELAY 10000
 
 #if defined(ARDUINO) && ARDUINO >= 100
@@ -36,9 +36,10 @@ class LightsClass
 	 void led_light(uint8_t ledNum, uint8_t ctrlNum);
 	 void portl_config(uint8_t val1, uint8_t val2, uint8_t val3);
 	
-	 void state_config();
-	 void time_config(uint32_t dis_delay);
+	 void state_config(uint16_t t1, uint16_t t2, uint16_t t3);
+	 void time_config(uint16_t t1, uint16_t t2, uint16_t t3);
 	 void mux_time_config(uint32_t dis_delay = 3);
+	 void state_inc(uint16_t in_tme);
 };
 
 #endif

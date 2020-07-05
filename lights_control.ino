@@ -12,9 +12,9 @@ void setup()
 
 void loop()
 {
-	lights.state_config();
-	lights.time_config(3);
-	lights.mux_time_config(3);
+	lights.state_config(4, 6, 10);
+	//lights.time_config(3);
+	//lights.mux_time_config(3);
 	
 }
 
